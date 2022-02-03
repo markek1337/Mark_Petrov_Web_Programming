@@ -90,14 +90,29 @@
         decide if he/she is eligible for voting. (18 or more than 18 years is eligible for voting.)
     </p>
 
-        <form action="" method="post">
+        <form action="" method="get">
             Enter your name
             <input type="text" name="" placeholder="Your name">
             <br>
+            <br>
             Enter your age
             <input type="text" name="t2" placeholder="Age">
-            <br><input type="submit" name="submit" value="submit">
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+            <br>
+            <br>
         </form>
+
+        <?php
+            $_GET["t2"];
+
+            if($_GET["t2"] >= 18) {
+                echo "You are <b>allowed</b> to vote.";
+            } else {
+                echo "You are <b>not allowed</b> to vote.";
+            }
+        ?>
 
     <p>
         5. Use a looping statement to construct the following pattern: 
@@ -123,8 +138,9 @@
     $str = "12345678";
         for ($i = 0; $i <= 7 ; $i++) {
             echo "$str" . "<br>";
+            // here i use function substr so that it could delete last
+            // character from the string
             $str = substr($str, 0, -1);
-
         }
     ?>
 
@@ -163,6 +179,10 @@
         (your website that you did with Tommi) to the repo. Include the link to the repo and
         your web page in the php file.
     </p>
+
+    <a href="https://markek1337.github.io/NorthTravelWebDev/">Website</a>
+    <br>
+    <a href="https://github.com/markek1337/NorthTravelWebDev">Git Hub repository</a>
 
 </body>
 </html>
