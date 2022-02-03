@@ -63,9 +63,106 @@
     </p>
 
     <?php
-    $grade = 75;
-    
+        $grade = 61;
+        
+        // here i used switch statement in order to reduce repetitive coding and made an execution of the code faster
+        switch ($grade) {
+            case ($grade >= 80):
+                echo "Excellent";
+                break;
+            case ($grade >= 70):
+                echo "Great";
+                break;
+            case ($grade >= 60):
+                echo "Good";
+                break;
+            case ($grade >= 50):
+                echo "Pass";
+                break;
+            default:
+                echo "Fail";
+                break;        
+        }
     ?>
+
+    <p>
+        4. Write a program to get inputs (age and name) from the user and based on their age,
+        decide if he/she is eligible for voting. (18 or more than 18 years is eligible for voting.)
+    </p>
+
+        <form action="" method="post">
+            Enter your name
+            <input type="text" name="" placeholder="Your name">
+            <br>
+            Enter your age
+            <input type="text" name="t2" placeholder="Age">
+            <br><input type="submit" name="submit" value="submit">
+        </form>
+
+    <p>
+        5. Use a looping statement to construct the following pattern: 
+        <br>
+        12345678
+        <br>
+        1234567
+        <br>
+        123456
+        <br>
+        12345
+        <br>
+        1234
+        <br>
+        123
+        <br>
+        12
+        <br>
+        1
+    </p>
+
+    <?php
+    $str = "12345678";
+        for ($i = 0; $i <= 7 ; $i++) {
+            echo "$str" . "<br>";
+            $str = substr($str, 0, -1);
+
+        }
+    ?>
+
+    <p>
+        6. Use While loop to print the following pattern:
+        <br>
+        *
+        <br>
+        **
+        <br>
+        ***
+        <br>
+        ****
+        <br>
+        *****
+        <br>
+        ******
+        <br>
+        *******
+        <br>
+        ********
+    </p>
+
+    <?php
+        $num = 1;
+        $character = "*";
+        while ($num <= 8) {
+            echo "$character" . "<br>";
+            $character .= "*";
+            $num++;
+        }
+    ?>
+
+    <p>
+        7. Create a GitHub repo and enable GitHub pages for the repo. Upload your HTML files
+        (your website that you did with Tommi) to the repo. Include the link to the repo and
+        your web page in the php file.
+    </p>
 
 </body>
 </html>
