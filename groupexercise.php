@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise2 / Mark Petrov</title>
+    <title>Group Exercise / Mark Petrov</title>
 
     <style>
         p {
@@ -34,10 +34,12 @@ $newfile = fopen('teamm2.txt','w') or die ("Failed to create a file");
         echo "File was not found";
     }
     echo "<h2>Step 2: Open the file using appropriate mode. (each member opens the file in different mode)</h2>";
+    $filename = fopen('teamm2.txt', 'w');
 
     echo "<h2>Step 3: Use fwrite/fread function to write/read on the file your team name and members name.</h2";
     $text = "Team 2 (Mona Achaaoud, Jarmila Škodová, Mark Petrov)";
-    fwrite($newfile, $text);
+    fwrite($filename, $text);
+    fclose($filename);
     $filename = "teamm2.txt";
     $handle = fopen($filename, "r");
     $cont = fread($handle, filesize($filename));
